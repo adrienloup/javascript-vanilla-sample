@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>carousel</title>
+  <style type="text/css">
+
+		body {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		.book {
+			display: none;
+		}
+
+		.book.read {
+			display: block;
+		}
+
+  </style>
+</head>
+<body>
+
+	<h1>Howard Phillips Lovecraft</h1>
+
+	<p><a class="toggle" href="#book-1">The Colour Out of Space</a></p>
+
+	<div class="book" id="book-1">
+		<p>A young architect from Boston comes to Arkham to study a tank project west of the city. He then hears about a legend about strange events that would have occurred in the 1880s on the Storm Land. At first skeptical, the narrator gradually realizes that the desolation of the place (greyish landscape, vegetation that has the consistency of ash) is not natural. When he learns about the possible causes of this state of affairs, he hears about a strange meteorite that fell in 1880 in the field of Nahum Gardner...</p>
+	</div>
+
+	<p><a class="toggle" href="#book-2">The Outsider</a></p>
+
+	<div class="book" id="book-2">
+		<p>Like many other Lovecraft texts, I am by the way written in the first person. The story is that of a character who leads an unhappy and lonely life. He does not seem to have been in contact with anyone for many, many years. He remembers only a few of his fellow men and does not seem to know who he is or where he comes from. He lives in a castle, incredibly tall and old, from which he seems never to have come out. What he knows about the outside world comes from books...</p>
+	</div>
+
+	<p><a class="toggle" href="#book-3">The Dunwich Horror</a></p>
+
+	<div class="book" id="book-3">
+		<p>In Dunwich, a remote village in the state of Massachusetts, a weak-minded albino named Lavinia Whateley gives birth to a strange child, Wilbur, of unknown father. Belonging to a degenerate branch of the Whateley family, Lavinia resides in an isolated farm with her father, the old Whateley, self-taught witch...</p>
+	</div>
+
+	<script>
+
+		document.addEventListener('click', (e) => {
+
+			e.preventDefault()
+
+			if (!e.target.classList.contains('toggle')) return
+
+			const book = document.querySelector(e.target.hash)
+
+			if (!book) return
+
+			if (book.classList.contains('read')) {
+				book.classList.remove('read')
+				return
+			}
+
+			const accordions = Array.from(document.querySelectorAll('.book.read'))
+
+			accordions.forEach((accordion) => accordion.classList.remove('read'))
+
+			book.classList.add('read')
+
+		}, false)
+
+	</script>
+
+</body>
+</html>
