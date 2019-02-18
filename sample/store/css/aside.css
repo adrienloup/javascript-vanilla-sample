@@ -1,0 +1,37 @@
+#aside{
+	width: 130px;
+	margin-left: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+#aside dl{
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: #eee;
+}
+
+#aside dt{
+	border-bottom: 1px solid #ddd;
+	text-transform: uppercase;
+}
+
+#aside dd{
+	border-bottom: 1px solid #ddd;
+	font-size: inherit;
+	color: inherit;
+}
+
+#aside dd:last-child{
+	border-bottom: 0;
+}
+
+#aside a{
+	display: block;
+	padding: 5px 10px;
+	color: inherit;
+}
+
+#aside a:hover, #aside a.active{
+	background-color: #ddd;
+}

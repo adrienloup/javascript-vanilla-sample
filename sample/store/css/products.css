@@ -1,0 +1,95 @@
+#products{
+	width: calc(100% - 150px);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-left: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+#products .product{
+	width: calc((100%/4) - 10px);
+	margin: 0 10px 10px 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#products .caption{
+	margin-top: 5px;
+}
+
+#products .brand, #products .title{
+	pointer-events: none;
+}
+
+#products .img{
+	display: block;
+	position: relative;
+}
+
+#products .img img{
+	display: block;
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+}
+
+#products .price{
+	display: block;
+	margin-top: 5px;
+	font-family: 'FTN75__W';
+	pointer-events: none;
+}
+
+#products svg.bag{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 2;
+}
+
+#products svg.bag circle{
+	fill: #fff;
+	pointer-events: none;
+}
+
+#products svg.bag path{
+	fill: #2d2d2d;
+	pointer-events: none;
+}
+
+#products svg.bag:hover circle, #products .product.in-bag svg.bag circle{
+	fill: #2d2d2d;
+}
+
+#products svg.bag:hover path, #products .product.in-bag svg.bag path{
+	fill: #fff;
+}
+
+#products .product.soldes .price{
+	text-decoration: line-through;
+}
+
+#products .product.soldes .price span{
+	display: inline-block;
+	padding-left: 5px;
+	color: #d01345;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1200px){
+
+	#products .product{
+		width: calc((100% / 3) - 10px);
+	}
+}
+
+@media screen and (max-width: 769px){
+
+	#products .product{
+		width: calc((100% / 2) - 10px);
+	}
+}
