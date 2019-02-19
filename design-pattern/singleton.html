@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Singleton</title>
+	</head>
+	<body>
+		<script>
+
+const Singleton = function() {
+
+	const constructor = function() {
+		this.publicMethod = function() {
+			return 'publicMethod'
+		}
+		const privateMethod = function() {
+			return 'privateMethod'
+		}
+		this.publicProperty = 'publicProperty'
+		const privatePropety = 'privateProperty'
+	}
+
+	let instance = null
+
+	return new function() {
+		this.getInstance = function() {
+			if ( instance  == null) {
+				instance = new constructor()
+				instance.constructor = null
+			}
+			return instance
+		}
+	}
+
+}()
+
+const a = Singleton.getInstance().publicMethod()
+const b = Singleton.getInstance().publicProperty
+
+document.body.insertAdjacentHTML('beforeend', `${a} ${b}`)
+
+		</script>
+	</body>
+</html>
