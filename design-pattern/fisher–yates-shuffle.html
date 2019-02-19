@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fisher–Yates Shuffle</title>
+</head>
+<body>
+
+	<script>
+
+function random(array) {
+	let index = array.length
+	let random
+	let _index
+	while (0 !== index) {
+		random = Math.floor(Math.random() * index)
+		index -= 1
+		_index = array[index]
+		array[index] = array[random]
+		array[random] = _index
+	}
+	return array.join(', ')
+}
+
+document.body.insertAdjacentHTML('afterbegin', random(['fish1','fish2','fish3','fish4','fish5']))
+
+	</script>
+</body>
+</html>
