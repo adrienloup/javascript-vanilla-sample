@@ -1,9 +1,8 @@
 var productsList = [
 	{
 		id: 'product1',
-		name: 'jean_skinny_taille_haute_delavage',
-		title: 'Jean skinny taille haute à délavage',
-		color: ['Foncé délavé', 'Foncé extrême', 'Bleu', 'Bleu délavé'],
+		title: 'High waisted skinny jeans with fading',
+		color: ['dark faded', 'dark extrême', 'Blue', 'Faded blue'],
 		img: 'pants-3',
 		price: '31.99',
 		clothing: 'Jean',
@@ -11,13 +10,12 @@ var productsList = [
 		size: ['XXS', 'XS', 'S', 'M'],
 		collection: 'Spring',
 		brand: 'Brand3',
-		categories: ['Tous', 'Femme', 'Jean', 'Spring', 'Brand3', 'Bleu']
+		categories: ['Tous', 'Femme', 'Jean', 'Spring', 'Brand3', 'Blue']
 	},
 	{
 		id: 'product2',
-		name: 'chemise_moulante_en_popeline',
-		title: 'Chemise moulante en popeline',
-		color: ['Noir', 'Gris'],
+		title: 'Bodycon poplin shirt',
+		color: ['Black', 'Grey'],
 		img: 'shirt-5',
 		price: '19.99',
 		clothing: 'Chemise',
@@ -25,13 +23,12 @@ var productsList = [
 		size: ['S', 'M', 'L', 'XL', 'XXL'],
 		collection: 'Autumn',
 		brand: 'Brand2',
-		categories: ['Tous', 'Homme', 'Chemise', 'Autumn', 'Brand2', 'Noir']
+		categories: ['Tous', 'Homme', 'Chemise', 'Autumn', 'Brand2', 'Black']
 	},
 	{
 		id: 'product3',
-		name: 'robe_mulet_mi_longue_a_carreaux',
-		title: 'Robe mulet mi-longue à carreaux',
-		color: ['Bleu'],
+		title: 'Mid-length check mullet dress',
+		color: ['Blue'],
 		img: 'dress-5',
 		price: '165.49',
 		clothing: 'Robe',
@@ -39,13 +36,12 @@ var productsList = [
 		size: ['XS', 'S', 'M', 'L'],
 		collection: 'Autumn',
 		brand: 'Brand2',
-		categories: ['Tous', 'Femme', 'Robe', 'Autumn', 'Brand2', 'Bleu']
+		categories: ['Tous', 'Femme', 'Robe', 'Autumn', 'Brand2', 'Blue']
 	},
 	{
 		id: 'product4',
-		name: 'jean_slim_taille_haute_avec_dechirures',
-		title: 'Jean slim taille haute avec déchirures',
-		color: ['Noir délavé', 'Noir'],
+		title: 'High-waisted slim jeans with rips',
+		color: ['Black faded', 'Black'],
 		img: 'pants-4',
 		price: '29.99',
 		clothing: 'Jean',
@@ -53,13 +49,12 @@ var productsList = [
 		size: ['XS', 'S', 'M', 'L'],
 		collection: 'Autumn',
 		brand: 'Brand3',
-		categories: ['Tous', 'Femme', 'Jean', 'Autumn', 'Brand3', 'Noir']
+		categories: ['Tous', 'Femme', 'Jean', 'Autumn', 'Brand3', 'Black']
 	},
 	{
 		id: 'product5',
-		name: 'manteau_en_crepe_avec_poches',
-		title: 'Manteau en crêpe avec poches',
-		color: ['Fauve', 'Blanc'],
+		title: 'Crepe coat with pockets',
+		color: ['Wildcat', 'White'],
 		img: 'coat-1',
 		price: '82.99',
 		clothing: 'Manteau',
@@ -67,13 +62,12 @@ var productsList = [
 		size: ['XS', 'S', 'M'],
 		collection: 'Autumn',
 		brand: 'Brand1',
-		categories: ['Tous', 'Femme', 'Manteau', 'Autumn', 'Brand1', 'Blanc']
+		categories: ['Tous', 'Femme', 'Manteau', 'Autumn', 'Brand1', 'White']
 	},
 	{
 		id: 'product6',
-		name: 'robe_chemise_courte_en_coton',
-		title: 'Robe chemise courte en coton',
-		color: ['Noir'],
+		title: 'Short shirt dress in cotton',
+		color: ['Black'],
 		img: 'dress-2',
 		price: '28.99',
 		clothing: 'Robe',
@@ -81,13 +75,12 @@ var productsList = [
 		size: ['XS', 'S', 'M', 'L', 'XL'],
 		collection: 'Spring',
 		brand: 'Brand2',
-		categories: ['Tous', 'Femme', 'Robe', 'Chemise', 'Spring', 'Brand2', 'Noir']
+		categories: ['Tous', 'Femme', 'Robe', 'Chemise', 'Spring', 'Brand2', 'Black']
 	},
 	{
 		id: 'product7',
-		name: 'selected_jean_slim',
-		title: 'Selected jean slim',
-		color: ['Noir', 'Gris'],
+		title: 'Selected slim jeans',
+		color: ['Black', 'Grey'],
 		img: 'pants-6',
 		price: '69.99',
 		clothing: 'Jean',
@@ -95,13 +88,12 @@ var productsList = [
 		size: ['S', 'M', 'L', 'XL'],
 		collection: 'Spring',
 		brand: 'Brand2',
-		categories: ['Tous', 'Homme', 'Jean', 'Spring', 'Brand2', 'Noir']
+		categories: ['Tous', 'Homme', 'Jean', 'Spring', 'Brand2', 'Black']
 	},
 	{
 		id: 'product8',
-		name: 'selected_jean_droit',
-		title: 'Selected jean droit',
-		color: ['Bleu clair', 'Bleu foncé', 'Bleu'],
+		title: 'Selected straight jeans',
+		color: ['Blue light', 'Blue dark', 'Blue'],
 		img: 'pants-5',
 		price: '60.99',
 		clothing: 'Jean',
@@ -109,13 +101,12 @@ var productsList = [
 		size: ['S', 'M', 'L', 'XL', 'XXL'],
 		collection: 'Autumn',
 		brand: 'Brand2',
-		categories: ['Tous', 'Homme', 'Jean', 'Autumn', 'Brand2', 'Bleu']
+		categories: ['Tous', 'Homme', 'Jean', 'Autumn', 'Brand2', 'Blue']
 	},
 	{
 		id: 'product9',
-		name: 'selected_pull_en_maille_en_cotons',
-		title: 'Selected pull en maille en coton et cachemire mélangés',
-		color: ['Bleu'],
+		title: 'Selected cotton and cashmere blend knit sweater',
+		color: ['Blue'],
 		img: 'pull-2',
 		price: '87.99',
 		clothing: 'Pull',
@@ -123,13 +114,12 @@ var productsList = [
 		size: ['S', 'M', 'L'],
 		collection: 'Spring',
 		brand: 'Brand2',
-		categories: ['Tous', 'Homme', 'Pull', 'Spring', 'Brand2', 'Bleu']
+		categories: ['Tous', 'Homme', 'Pull', 'Spring', 'Brand2', 'Blue']
 	},
 	{
 		id: 'product10',
-		name: 'manteau_style_militaire',
-		title: 'Manteau style militaire',
-		color: ['Noir'],
+		title: 'Military style coat',
+		color: ['Black'],
 		img: 'coat-3',
 		price: '159.99',
 		clothing: 'Manteau',
@@ -137,13 +127,12 @@ var productsList = [
 		size: ['S', 'M', 'L'],
 		collection: 'Autumn',
 		brand: 'Brand1',
-		categories: ['Tous', 'Homme', 'Manteau', 'Autumn', 'Brand1', 'Noir']
+		categories: ['Tous', 'Homme', 'Manteau', 'Autumn', 'Brand1', 'Black']
 	},
 	{
 		id: 'product11',
-		name: 'chemise_a_manches_longues_et_motif',
-		title: 'Chemise à manches longues et motif',
-		color: ['Vert'],
+		title: 'Long sleeve shirt and pattern',
+		color: ['Green'],
 		img: 'shirt-3',
 		price: '29.99',
 		clothing: 'Chemise',
@@ -151,13 +140,12 @@ var productsList = [
 		size: ['XS', 'S', 'M', 'L', 'XL'],
 		collection: 'Spring',
 		brand: 'Brand2',
-		categories: ['Tous', 'Femme', 'Chemise', 'Spring', 'Brand2', 'Vert']
+		categories: ['Tous', 'Femme', 'Chemise', 'Spring', 'Brand2', 'Green']
 	},
 	{
 		id: 'product12',
-		name: 'Robe_babydoll_courte_reversible',
-		title: 'Robe babydoll courte réversible en coton flammé',
-		color: ['Kaki', 'Vert'],
+		title: 'Reversible cotton short babydoll dress',
+		color: ['Kaki', 'Green'],
 		img: 'dress-3',
 		price: '29.99',
 		clothing: 'Robe',
@@ -165,13 +153,12 @@ var productsList = [
 		size: ['XXS', 'XS', 'S', 'M', 'L'],
 		collection: 'Spring',
 		brand: 'Brand2',
-		categories: ['Tous', 'Femme', 'Robe', 'Chemise', 'Spring', 'Brand2', 'Vert']
+		categories: ['Tous', 'Femme', 'Robe', 'Chemise', 'Spring', 'Brand2', 'Green']
 	},
 	{
 		id: 'product13',
-		name: 'robe_missguided_moulante',
-		title: 'Robe missguided moulante à col montant',
-		color: ['Noir'],
+		title: 'Missguided Bodycon Dress with High Neck',
+		color: ['Black'],
 		img: 'dress-1',
 		price: '42.99',
 		clothing: 'Robe',
@@ -179,13 +166,12 @@ var productsList = [
 		size: ['XXS', 'XS', 'S', 'M'],
 		collection: 'Autumn',
 		brand: 'Brand1',
-		categories: ['Tous', 'Femme', 'Robe', 'Autumn', 'Brand1', 'Noir']
+		categories: ['Tous', 'Femme', 'Robe', 'Autumn', 'Brand1', 'Black']
 	},
 	{
 		id: 'product14',
-		name: 'jean_pretty_little_thing',
 		title: 'Jean pretty little thing',
-		color: ['Bleu délavé', 'Bleu délavé moyen', 'Bleu', 'Navy'],
+		color: ['Faded blue', 'Faded blue moyen', 'Blue', 'Navy'],
 		img: 'pants-2',
 		price: '30.99',
 		clothing: 'Jean',
@@ -193,13 +179,12 @@ var productsList = [
 		size: ['XXS', 'XS', 'S', 'M'],
 		collection: 'Autumn',
 		brand: 'Brand3',
-		categories: ['Tous', 'Femme', 'Jean', 'Autumn', 'Brand3', 'Bleu']
+		categories: ['Tous', 'Femme', 'Jean', 'Autumn', 'Brand3', 'Blue']
 	},
 	{
 		id: 'product15',
-		name: 'robe_chemise_cache_coeur',
-		title: 'Robe chemise cache-cœur noué à la taille',
-		color: ['Multi', 'Blanc'],
+		title: 'Wrap shirt dress at the waist',
+		color: ['Multi', 'White'],
 		img: 'dress-4',
 		price: '38.99',
 		clothing: 'Robe',
@@ -207,13 +192,12 @@ var productsList = [
 		size: ['XXS', 'XS', 'S', 'M', 'L'],
 		collection: 'Spring',
 		brand: 'Brand2',
-		categories: ['Tous', 'Femme', 'Robe', 'Spring', 'Brand2', 'Blanc']
+		categories: ['Tous', 'Femme', 'Robe', 'Spring', 'Brand2', 'White']
 	},
 	{
 		id: 'product16',
-		name: 'manteau_fausse_fourrure',
-		title: 'Manteau fausse fourrure à motif léopard',
-		color: ['Noir'],
+		title: 'Faux fur coat with leopard pattern',
+		color: ['Black'],
 		img: 'coat-2',
 		price: '385.99',
 		clothing: 'Manteau',
@@ -221,13 +205,12 @@ var productsList = [
 		size: ['XS', 'S', 'M', 'L'],
 		collection: 'Autumn',
 		brand: 'Brand2',
-		categories: ['Tous', 'Femme', 'Manteau', 'Autumn', 'Brand2', 'Noir']
+		categories: ['Tous', 'Femme', 'Manteau', 'Autumn', 'Brand2', 'Black']
 	},
 	{
 		id: 'product17',
-		name: 'jean_mom_slim_taille_haute',
-		title: 'Jean mom slim taille haute avec fermeture à boutons apparents',
-		color: ['Dark london Noir', 'Noir délavé', 'Noir délavé moyen', 'Noir'],
+		title: 'Slim-fit, slim-fit jeans with exposed button fastening',
+		color: ['Dark london Black', 'Black faded', 'Black'],
 		img: 'pants-1',
 		price: '36.99',
 		clothing: 'Jean',
@@ -235,13 +218,12 @@ var productsList = [
 		size: ['XXS', 'XS', 'S', 'M'],
 		collection: 'Autumn',
 		brand: 'Brand3',
-		categories: ['Tous', 'Femme', 'Jean', 'Autumn', 'Brand3', 'Noir']
+		categories: ['Tous', 'Femme', 'Jean', 'Autumn', 'Brand3', 'Black']
 	},
 	{
 		id: 'product18',
-		name: 'pull_court_en_maille_cotelee',
-		title: 'Pull  pretty little thin court en maille côtelée',
-		color: ['Orange', 'Jaune'],
+		title: 'Pretty little thin short ribbed knit sweater',
+		color: ['Orange', 'Yellow'],
 		img: 'pull-1',
 		price: '27.99',
 		clothing: 'Pull',
@@ -253,9 +235,8 @@ var productsList = [
 	},
 	{
 		id: 'product19',
-		name: 'blouse_pretty_little_thing_rayee',
-		title: 'Blouse rayée à décolleté plongeant et ourlet à basque avec volants superposés',
-		color: ['Noir'],
+		title: 'Striped blouse with plunging neckline and burgundy hem with bolstered ruffles',
+		color: ['Black'],
 		img: 'shirt-2',
 		price: '32.99',
 		clothing: 'Chemise',
@@ -263,13 +244,12 @@ var productsList = [
 		size: ['XXS','XS', 'S', 'M'],
 		collection: 'Spring',
 		brand: 'Brand1',
-		categories: ['Tous', 'Femme', 'Chemise', 'Spring', 'Brand1', 'Noir']
+		categories: ['Tous', 'Femme', 'Chemise', 'Spring', 'Brand1', 'Black']
 	},
 	{
 		id: 'product20',
-		name: 'robe_pretty_little_thing_patineuse',
-		title: 'Robe patineuse courte avec empiècements en dentelle',
-		color: ['Bordeaux'],
+		title: 'Short skater dress with lace inserts',
+		color: ['Red'],
 		img: 'dress-6',
 		price: '41.99',
 		clothing: 'Robe',
@@ -277,7 +257,6 @@ var productsList = [
 		size: ['XXS','XS', 'S', 'M'],
 		collection: 'Spring',
 		brand: 'Brand1',
-		categories: ['Tous', 'Femme', 'Robe', 'Spring', 'Brand1', 'Bordeaux']
-
+		categories: ['Tous', 'Femme', 'Robe', 'Spring', 'Brand1', 'Red']
 	}
 ]
