@@ -4,6 +4,7 @@
 * [Prime number calculator](https://adrienloup.github.io/javascript-vanilla-sample/sample/prime-number-calculator/index.html)
 * [Accordion](https://adrienloup.github.io/javascript-vanilla-sample/sample/accordion/index.html)
 * [Tabs](https://adrienloup.github.io/javascript-vanilla-sample/sample/tabs/index.html)
+* [Sticky elements](https://adrienloup.github.io/javascript-vanilla-sample/sample/sticky-elements/index.html)
 * [Rondom color](https://adrienloup.github.io/javascript-vanilla-sample/sample/random-color/index.html)
 
 ### Design pattern
