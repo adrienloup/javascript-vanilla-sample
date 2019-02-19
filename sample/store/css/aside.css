@@ -1,37 +1,24 @@
-#aside{
-	width: 130px;
-	margin-left: 10px;
+#aside {
+	width: 200px;
+	margin-left: 20px;
 	position: relative;
 	z-index: 1;
 }
 
-#aside dl{
+#aside ul {
 	width: 100%;
 	margin-bottom: 10px;
-	background-color: #eee;
+	border-top: 1px solid #ddd;
+	list-style-type: none;
 }
 
-#aside dt{
-	border-bottom: 1px solid #ddd;
-	text-transform: uppercase;
-}
-
-#aside dd{
-	border-bottom: 1px solid #ddd;
+#aside li {
 	font-size: inherit;
 	color: inherit;
 }
 
-#aside dd:last-child{
-	border-bottom: 0;
-}
-
-#aside a{
+#aside a {
 	display: block;
-	padding: 5px 10px;
+	padding: 10px;
 	color: inherit;
-}
-
-#aside a:hover, #aside a.active{
-	background-color: #ddd;
 }

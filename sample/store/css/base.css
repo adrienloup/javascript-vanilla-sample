@@ -10,35 +10,51 @@
 		url('../fonts/FTN75__W.woff') format('woff');
 }
 
-*, html, body{
+*, html, body {
 	margin: 0;
 	padding: 0;
 }
 
-html{
+html {
+	height: 100%;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 }
 
-body{
+body {
+	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	letter-spacing: 1px;
-	font: 14px/1.2 'FTN45__W', sans-serif;
+	font: 18px/1.2 'FTN45__W', sans-serif;
 	font-weight: normal;
 	color: #2d2d2d;
 }
 
-body.details{
+body.details {
 	overflow-y: hidden;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-#main{
+#main {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: stretch;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 1;
+}
+
+#content {
+	width: 100%;
+	height: calc(100vh - 100px);
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -46,4 +62,5 @@ a{
 	flex-wrap: wrap;
 	position: relative;
 	z-index: 1;
+	padding-top: 20px;
 }

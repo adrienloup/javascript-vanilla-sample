@@ -1,34 +1,40 @@
-#products{
-	width: calc(100% - 150px);
+#products {
+	width: calc(100% - 240px);
+	min-height: 100%;
+	height: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	padding-left: 10px;
+	padding-left: 20px;
 	position: relative;
 	z-index: 1;
 }
 
-#products .product{
-	width: calc((100%/4) - 10px);
-	margin: 0 10px 10px 0;
+#products .empty {
+	margin: auto;
+}
+
+#products .product {
+	width: calc((100%/4) - 20px);
+	margin: 0 20px 20px 0;
 	overflow: hidden;
 	cursor: pointer;
 }
 
-#products .caption{
+#products .caption {
 	margin-top: 5px;
 }
 
-#products .brand, #products .title{
+#products .brand, #products .title {
 	pointer-events: none;
 }
 
-#products .img{
+#products .img {
 	display: block;
 	position: relative;
 }
 
-#products .img img{
+#products .img img {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -37,7 +43,7 @@
 	pointer-events: none;
 }
 
-#products .price{
+#products .price {
 	display: block;
 	margin-top: 5px;
 	font-family: 'FTN75__W';
@@ -69,27 +75,44 @@
 	fill: #fff;
 }
 
-#products .product.soldes .price{
+#products .product.soldes .img::after {
+	content: "";
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	z-index: 2;
+	width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+	border-right:30px solid #d01345;
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+#products .product.soldes .price {
 	text-decoration: line-through;
 }
 
-#products .product.soldes .price span{
+#products .product.soldes .price span {
 	display: inline-block;
 	padding-left: 5px;
 	color: #d01345;
 	text-decoration: none;
 }
 
-@media screen and (max-width: 1200px){
+#products svg {}
 
-	#products .product{
-		width: calc((100% / 3) - 10px);
+@media screen and (max-width: 1200px) {
+
+	#products .product {
+		width: calc((100% / 3) - 20px);
 	}
 }
 
-@media screen and (max-width: 769px){
+@media screen and (max-width: 769px) {
 
-	#products .product{
-		width: calc((100% / 2) - 10px);
+	#products .product {
+		width: calc((100% / 2) - 20px);
 	}
 }
