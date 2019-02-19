@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>change color at click</title>
+	<title>Random Color</title>
 	<style>
 	
 	body {
@@ -11,8 +11,8 @@
 	}
 
 	div {
-		width: 100px;
-		height: 100px;
+		width: 200px;
+		height: 200px;
 		margin: auto;
 		border-radius: 10px;
 		background-color: red;
@@ -29,7 +29,7 @@
 		const div = document.getElementsByTagName('div')[0]
 
 		document.addEventListener('click', _ => {
-			let colors = ['red', 'green', 'blue']
+			let colors = ['Gray', 'Black', 'Red', 'Maroon', 'Yellow', 'Olive', 'Lime', 'Green', 'Aqua', 'Teal', 'Blue', 'Navy', 'Fuchsia', 'magenta', 'Purple', 'chartreuse']
 			let color = colors[Math.floor(Math.random() * colors.length)]
 			div.style.background = color
 		}, false)
