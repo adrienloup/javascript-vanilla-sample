@@ -65,6 +65,8 @@ div {
 class Sticky {
 
 	constructor(element) {
+		this.onResize = this.onResize.bind(this)
+		this.onScroll = this.onScroll.bind(this)
 		this.element = document.querySelector(element)
 		this.sticky = false
 		this.clone = null
@@ -74,10 +76,10 @@ class Sticky {
 		this.top = 0
 		this.all = null
 	}
-
+				
 	events() {
-		window.addEventListener('resize', _ => this.onResize())
-		window.addEventListener('scroll', _ => this.onScroll())
+		window.addEventListener('resize', this.onResize, false)
+		window.addEventListener('scroll', this.onScroll, false)
 	}
 
 	init() {
