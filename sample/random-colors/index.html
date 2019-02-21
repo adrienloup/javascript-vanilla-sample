@@ -51,10 +51,8 @@ function random() {
 	}
 }
 
-document.addEventListener('click', _ => {
-	let color = colors[Math.floor(Math.random() * colors.length)]
-	random()
-})
+document.addEventListener('click', random, false)
+
 random()
 
 	</script>
