@@ -129,12 +129,14 @@ class Sticky {
 	}
 
 	onScroll() {
-		// console.log(this)
 		this.scroll = window.pageYOffset
 		this.render()
 	}
 
 	onResize() {
+
+		this.height = this.element.clientHeight
+		this.element.style.top = this.top + 'px'
 
 		if(this.clone) {
 			this.clone.style.height = this.height + 'px'
@@ -142,32 +144,28 @@ class Sticky {
 		} else {
 			this.offset = this.element.offsetTop
 		}
-		this.height = this.element.clientHeight
 
-		var total = 0
+		let allHeight = 0
 		for(let i = 0, l = this.all.length; i < l; i++) {
 			if(this.all[i-1] !== undefined) {
-				// +=
-				total += this.all[i-1].clientHeight
+				allHeight += this.all[i-1].clientHeight
 			}
 		}
-		this.top = total
-	
+		this.top = allHeight
+
 	}
 
 }
 
-const elm1 = new Sticky('#element1')
-const elm2 = new Sticky('#element2')
-const elm3 = new Sticky('#element3')
-const elm4 = new Sticky('#element4')
+const element1 = new Sticky('#element1')
+const element2 = new Sticky('#element2')
+const element3 = new Sticky('#element3')
+const element4 = new Sticky('#element4')
 
-elm1.init()
-elm2.init()
-elm3.init()
-elm4.init()
-
-console.log(elm4)
+element1.init()
+element2.init()
+element3.init()
+element4.init()
 
 		</script>
 
