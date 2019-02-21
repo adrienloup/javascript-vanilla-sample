@@ -10,11 +10,12 @@
 		display: flex;
 	}
 
-	div {
+	button {
 		width: 200px;
 		height: 200px;
 		margin: auto;
-		border-radius: 10px;
+		border: none;
+		border-radius: 20px;
 		background-color: red;
 	}
 
@@ -22,17 +23,17 @@
 </head>
 <body>
 
-	<div></div>
+	<button></button>
 
 	<script>
 
-		const div = document.getElementsByTagName('div')[0]
+const button = document.querySelector('button')
+const colors = ['Gray', 'Black', 'Red', 'Maroon', 'Yellow', 'Olive', 'Lime', 'Green', 'Aqua', 'Teal', 'Blue', 'Navy', 'Fuchsia', 'magenta', 'Purple', 'chartreuse']
 
-		document.addEventListener('click', _ => {
-			let colors = ['Gray', 'Black', 'Red', 'Maroon', 'Yellow', 'Olive', 'Lime', 'Green', 'Aqua', 'Teal', 'Blue', 'Navy', 'Fuchsia', 'magenta', 'Purple', 'chartreuse']
-			let color = colors[Math.floor(Math.random() * colors.length)]
-			div.style.background = color
-		}, false)
+document.addEventListener('click', _ => {
+	let color = colors[Math.floor(Math.random() * colors.length)]
+  button.style.background = color
+})
 
 	</script>
 
