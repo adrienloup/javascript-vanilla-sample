@@ -1,336 +1,173 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>Sticky Elements</title>
 		<style>
 
-			*, html, body{
-				margin: 0;
-				padding: 0;
-			}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-			body{
-				background-color: #eee;
-				font-family: 'Open Sans', sans-serif;
-				color: #000;
-			}
+body {
+	font: 16px/1.6 -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
 
-			h1, h2, h3, li{ font-size: 18px }
+div {
+	padding: 20px;
+}
 
-			p{
-				font-size: 18px;
-				margin-top: 10px;
-			}
+#element1 {
+	background-color: #e6f2ff;
+}
 
-			a{
-				text-decoration: none;
-				color: inherit;
-			}
+#element2 {
+	background-color: #ffffe6;
+}
 
-			.main{
-				padding: 0 20px;
-				font-size: 0;
-			}
+#element3 {
+	background-color: #ffe6ff;
+}
 
-			.head{ padding: 20px 0 }
-
-			.menu{
-				position: relative;
-				z-index: 2;
-				width: 100%;
-			}
-
-			.menu ul{
-				width: 100%;
-				background-color: #fff;
-				box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.1);
-			}
-
-			.menu li{
-				display: inline-block;
-				vertical-align: top;
-			}
-
-			.menu a{
-				display: block;
-				padding: 15px 30px;
-				text-decoration: none;
-				color: inherit;
-			}
-
-			.content{
-				display: inline-block;
-				vertical-align: top;
-				width: 70%;
-				padding: 20px 0;
-			}
-
-			.content p{ margin-top: 10px }
-
-			.sidebar{
-				display: inline-block;
-				vertical-align: top;
-				width: calc(30% - 20px);
-				height: 100vh;
-				padding: 20px 0 0 20px;
-				position: relative;
-			}
-
-			.inside{
-				padding: 20px;
-				background-color: #fff;
-				box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.1);
-			}
+#element4 {
+	background-color: #e6ffe6;
+}
 
 		</style>
 	</head>
 
 	<body>
 
-		<div class="main">
-
-			<div class="head">
-				<div class="inside">
-					<h1>Lorem ipsum</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
-			</div>
-
-			<div class="menu" data-sticky>
-				<ul>
-					<li><a href="#">tab1</a></li>
-					<li><a href="#">tab2</a></li>
-					<li><a href="#">tab3</a></li>
-				</ul>
-			</div>
-
-			<div class="content">
-				<div class="inside">
-					<h1>Lorem ipsum</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<h2>Lorem ipsum</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
-			</div>
-
-			<div class="sidebar">
-				<div class="sidebar-inside" data-sticky data-offset="74" data-constraint=".sidebar">
-					<div class="inside">
-						<h3>Lorem ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor.</p>
-						<p>incididunt ut labore et dolore magna aliqua.</p>
-						<p>incididunt ut labore et dolore magna aliqua.</p>
-						<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-						<p>Quis incididunt ut laboret enim ad minim veniam</p>
-					</div>
-				</div>
-			</div>
-
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, ultricies eget venenatis sed, 		pulvinar sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et volutpat lacus. Sed euismod dui eget nibh rutrum, non bibendum massa dignissim. Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, ultricies eget venenatis sed, pulvinar sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et volutpat lacus. Sed euismod dui eget nibh rutrum, non bibendum massa dignissim. Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis.</p>
+		</div>
+		<div id="element1">Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		<div>
+			<p>Aliquam dolor magna, tincidunt at luctus in, maximus eget enim. Mauris tellus ligula, porta sed magna quis, dictum placerat eros. Nulla placerat nec dui eget egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent lacinia porta ultrices. Aenean quis tincidunt diam. Sed iaculis orci non aliquam euismod. Phasellus vel orci vitae mi elementum porta quis ut ligula. Integer commodo dictum velit ut interdum. Nulla eleifend mi non leo porttitor feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, aecenas et ultrices turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, ultricies eget venenatis sed, pulvinar sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et volutpat lacus. Sed euismod dui eget nibh rutrum, non bibendum massa dignissim. Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis.</p>
+		</div>
+		<div id="element2">Sed euismod dui eget nibh rutrum, non bibendum massa dignissim. Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Phasellus vel orci vitae mi elementum porta quis ut ligula. Phasellus vel orci vitae mi elementum porta quis ut ligula. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit.</div>
+		<div>
+			<p>Proin tristique vestibulum urna vitae posuere. Nunc quis finibus augue. Aenean auctor, magna vitae interdum interdum, nisi nulla finibus nulla, eu ornare ipsum turpis vitae augue. Maecenas eu tristique velit, sed pretium nibh. Morbi mattis maximus sollicitudin. Vestibulum odio sem, ornare quis risus ut, iaculis auctor metus. Mauris ante ipsum, interdum sed ex non, luctus porta est. Integer pharetra ut orci pretium convallis. Nulla scelerisque pharetra feugiat. Quisque mi felis, sodales in molestie hendrerit, mollis tempor justo. Donec at suscipit nibh. In tellus augue, pretium molestie neque at, molestie placerat nisi. Proin rutrum mattis velit a finibus. Maecenas gravida mi non ultrices vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue Sed euismod dui eget nibh rutrum, non bibendum massa dignissim. Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis.</p>
+		</div>
+		<div id="element3">Vestibulum odio sem, ornare quis risus ut, iaculis auctor metus. Mauris ante ipsum, interdum sed ex non, luctus porta est. Integer pharetra ut orci pretium convallis. Nulla scelerisque pharetra feugiat. Quisque mi felis, sodales in molestie hendrerit, mollis tempor justo. Donec at suscipit nibh. In tellus augue, pretium molestie neque at, molestie placerat nisi. Proin rutrum mattis velit a finibus. Maecenas gravida mi non ultrices vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, ultricies eget venenatis sed, pulvinar sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et volutpat lacus.</div>
+		<div>
+			<p>Nunc et leo vitae turpis egestas vestibulum. Praesent lacinia sollicitudin lorem sed molestie. Sed placerat sagittis cursus. Nunc ornare convallis ligula, eget pretium sapien. Nunc imperdiet elementum nulla eget convallis. Cras viverra vel libero eget auctor. Nulla eleifend turpis et est lacinia, et hendrerit libero congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, ultricies eget venenatis sed, pulvinar sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et volutpat lacus. Sed euismod dui eget nibh rutrum, non bibendum massa dignissim. Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis.</p>
+		</div>
+		<div id="element4">Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula.</div>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis. Aliquam dolor magna, tincidunt at luctus in, maximus eget enim. Mauris tellus ligula, porta sed magna quis, dictum placerat eros. Nulla placerat nec dui eget egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent lacinia porta ultrices. Aenean quis tincidunt diam. Sed iaculis orci non aliquam euismod. Phasellus vel orci vitae mi elementum porta quis ut ligula. Integer commodo dictum velit ut interdum. Nulla eleifend mi non leo porttitor feugiat. In eu dui dictum, interdum quam vel, rhoncus leo. Vestibulum dignissim ante ut ligula consequat vulputate. Sed feugiat ut dolor nec efficitur. In ac massa quis augue malesuada mollis. Nam congue molestie mauris sodales posuere. Etiam non enim lorem. Morbi volutpat risus lobortis, viverra nisl in, aliquet purus. Mauris imperdiet sem non diam dapibus, a finibus nisl interdum. Maecenas cursus orci eget commodo iaculis. Aliquam dolor magna, tincidunt at luctus in, maximus eget enim. Mauris tellus ligula, porta sed magna quis, dictum placerat eros. Nulla placerat nec dui eget egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam dolor magna, tincidunt at luctus in, maximus eget enim. Mauris tellus ligula, porta sed magna quis, dictum placerat eros. Nulla placerat nec dui eget egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin tristique vestibulum urna vitae posuere. Nunc quis finibus augue. Aenean auctor, magna vitae interdum interdum, nisi nulla finibus nulla, eu ornare ipsum turpis vitae augue. Maecenas eu tristique velit, sed pretium nibh. Morbi mattis maximus sollicitudin. Vestibulum odio sem, ornare quis risus ut, iaculis auctor metus. Mauris ante ipsum, interdum sed ex non, luctus porta est. Integer pharetra ut orci pretium convallis. Nulla scelerisque pharetra feugiat. Quisque mi felis, sodales in molestie hendrerit, mollis tempor justo. Donec at suscipit nibh. In tellus augue, pretium molestie neque at, molestie placerat nisi. Aliquam dolor magna, tincidunt at luctus in, maximus eget enim. Mauris tellus ligula, porta sed magna quis, dictum placerat eros. Nulla placerat nec dui eget egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin rutrum mattis velit a finibus. Maecenas gravida mi non ultrices vestibulum. Nunc et leo vitae turpis egestas vestibulum. Praesent lacinia sollicitudin lorem sed molestie. Sed placerat sagittis cursus. Nunc ornare convallis ligula, eget pretium sapien. Nunc imperdiet elementum nulla eget convallis. Cras viverra vel libero eget auctor. Nulla eleifend turpis et est lacinia, et hendrerit libero congue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer augue augue, ultricies eget venenatis sed, pulvinar sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec et volutpat lacus. Sed euismod dui eget nibh rutrum, non bibendum massa dignissim. Integer accumsan varius erat ut dignissim. Aenean vulputate nisi et ante dignissim, in eleifend diam mattis. Curabitur vitae tristique urna, eget auctor quam. Phasellus neque augue, elementum ac blandit eu, tempus vel neque. In nec leo velit. Mauris aliquam porta vehicula. Maecenas et ultrices turpis. Aliquam dolor magna, tincidunt at luctus in, maximus eget enim. Mauris tellus ligula, porta sed magna quis, dictum placerat eros. Nulla placerat nec dui eget egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent lacinia porta ultrices. Aenean quis tincidunt diam. Sed iaculis orci non aliquam euismod. Phasellus vel orci vitae mi elementum porta quis ut ligula. Integer commodo dictum velit ut interdum. Nulla eleifend mi non leo porttitor feugiat. In eu dui dictum, interdum quam vel, rhoncus leo. Vestibulum dignissim ante ut ligula consequat vulputate. Sed feugiat ut dolor nec efficitur. In ac massa quis augue malesuada mollis. Nam congue molestie mauris sodales posuere. Etiam non enim lorem. Morbi volutpat risus lobortis, viverra nisl in, aliquet purus. Mauris imperdiet sem non diam dapibus, a finibus nisl interdum. Maecenas cursus orci eget commodo iaculis. Proin tristique vestibulum urna vitae posuere. Nunc quis finibus augue. Aenean auctor, magna vitae interdum interdum, nisi nulla finibus nulla, eu ornare ipsum turpis vitae augue. Maecenas eu tristique velit, sed pretium nibh. Morbi mattis maximus sollicitudin. Vestibulum odio sem, ornare quis risus ut, iaculis auctor metus. Mauris ante ipsum, interdum sed ex non, luctus porta est. Integer pharetra ut orci pretium convallis. Nulla scelerisque pharetra feugiat. Quisque mi felis, sodales in molestie hendrerit, mollis tempor justo. Donec at suscipit nibh. In tellus augue, pretium molestie neque at, molestie placerat nisi. Proin rutrum mattis velit a finibus. Maecenas gravida mi non ultrices vestibulum. Nunc et leo vitae turpis egestas vestibulum. Praesent lacinia sollicitudin lorem sed molestie. Sed placerat sagittis cursus. Nunc ornare convallis ligula, eget pretium sapien. Nunc imperdiet elementum nulla eget convallis. Cras viverra vel libero eget auctor.</p>
 		</div>
 
 		<script>
 
-			(function() {
+class Sticky {
 
-				var scrollTop = function() {
-					var scrollY = window.pageYOffset || document.documentElement.scrollTop
-					return scrollY
-				}
+	constructor(element) {
+		this.element = document.querySelector(element)
+		this.sticky = false
+		this.clone = null
+		this.height = null
+		this.offset = null
+		this.scroll = 0
+		this.top = 0
+		this.all = null
+	}
 
-				window.sticky = function(element) {
+	events() {
+		window.addEventListener('resize', _ => this.onResize())
+		window.addEventListener('scroll', _ => this.onScroll())
+	}
 
-					var rect = element.getBoundingClientRect()
-					var offset = parseInt(element.getAttribute('data-offset') || 0, 10)
-					var constraint
+	init() {
+		this.element.classList.add('sticky')
+		this.all = document.querySelectorAll('.sticky')
+		this.events()
+		this.onResize()
+	}
 
-					if(element.getAttribute('data-constraint')) {
-						constraint = document.querySelector(element.getAttribute('data-constraint'))
-					} else {
-						constraint = document.body
-					}
+	creatClone() {
+		let div = document.createElement('div')
+		div.style.height = this.height + 'px'
+		this.element.parentNode.insertBefore(div, this.element)
+		this.clone = this.element.previousSibling
+	}
 
-					var constraintRect = constraint.getBoundingClientRect()
-					var constraintBottom = constraintRect.top + scrollTop() + constraintRect.height - offset - rect.height
-					var top = rect.top + scrollTop()
-					var fake = document.createElement('div')
+	elementTaped() {
+		this.element.style.position = 'fixed'
+		this.element.style.top = this.top + 'px'
+	}
 
-					fake.style.width = rect.width + 'px'
-					fake.style.height = rect.height + 'px'
+	elementTakeOff() {
+		this.element.style = ''
+		this.element.previousSibling.remove()
+	}
 
-					var onScroll = function() {
-						if(scrollTop() > constraintBottom && element.style.position != 'absolute') {
-							element.style.position = 'absolute'
-							element.style.top = 'auto'
-							element.style.bottom = '0px'
-						} else if(scrollTop() > top - offset && scrollTop() < constraintBottom && element.style.position != 'fixed') {
-							element.classList.add('sticky')
-							element.style.position = 'fixed'
-							element.style.width = rect.width + 'px'
-							element.style.top = offset + 'px'
-							element.parentNode.insertBefore(fake, element)
-						} else if(scrollTop() < top - offset && element.style.position != 'static') {
-							element.classList.remove('sticky')
-							element.style.position = 'static'
-							if(element.parentNode.contains(fake)) {
-								element.parentNode.removeChild(fake)
-							}
-						}
-					}
+	taped() {
+		if(!this.sticky) {
+			this.creatClone()
+			this.elementTaped()
+			this.sticky = true
+			return
+		}
+	}
 
-					var onResize = function() {
-						element.style.width = 'auto'
-						element.classList.remove('sticky')
-						element.style.position = 'static'
-						fake.style.display = 'none'
-						top = rect.top + scrollTop()
-						rect = element.getBoundingClientRect()
-						constraintRect = constraint.getBoundingClientRect()
-						constraintBottom = constraintRect.top + scrollTop() + constraintRect.height - offset - rect.height
-						top = rect.top + scrollTop()
-						fake.style.width = rect.width + 'px'
-						fake.style.height = rect.height + 'px'
-						fake.style.display = 'block'
-						onScroll()
-					}
+	takeOff() {
+		if(this.sticky) {
+			this.elementTakeOff()
+			this.clone = null
+			this.sticky = false
+			return
+		}
+	}
 
-					window.addEventListener('scroll', onScroll)
-					window.addEventListener('resize', onResize)
+	render() {
+		(this.scroll >= (this.offset - this.top))
+		? this.taped()
+		: this.takeOff()
+	}
 
-				}
+	onScroll() {
+		// console.log(this)
+		this.scroll = window.pageYOffset
+		this.render()
+	}
 
-				var elements = document.querySelectorAll('[data-sticky]')
+	onResize() {
 
-				for(var i = 0, length = elements.length; i < length; i++) {
-					sticky(elements[i])
-				}
+		if(this.clone) {
+			this.clone.style.height = this.height + 'px'
+			this.offset = this.clone.offsetTop
+		} else {
+			this.offset = this.element.offsetTop
+		}
+		this.height = this.element.clientHeight
 
-			})()
+		var total = 0
+		for(let i = 0, l = this.all.length; i < l; i++) {
+			if(this.all[i-1] !== undefined) {
+				// +=
+				total += this.all[i-1].clientHeight
+			}
+		}
+		this.top = total
+	
+	}
+
+}
+
+const elm1 = new Sticky('#element1')
+const elm2 = new Sticky('#element2')
+const elm3 = new Sticky('#element3')
+const elm4 = new Sticky('#element4')
+
+elm1.init()
+elm2.init()
+elm3.init()
+elm4.init()
+
+console.log(elm4)
 
 		</script>
 
