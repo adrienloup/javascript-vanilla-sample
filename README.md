@@ -7,7 +7,7 @@
 * [Tabs](https://adrienloup.github.io/javascript-vanilla-sample/sample/tabs/index.html)
 * [Singleton](https://adrienloup.github.io/javascript-vanilla-sample/design-pattern/singleton.html)
 * [Prime number calculator](https://adrienloup.github.io/javascript-vanilla-sample/sample/prime-number-calculator/index.html)
-* [Rondom color](https://adrienloup.github.io/javascript-vanilla-sample/sample/random-color/index.html)
+* [Rondom color](https://adrienloup.github.io/javascript-vanilla-sample/sample/random-colors/index.html)
 
 ### License
 [ISC](https://github.com/adrienloup/javascript-vanilla-sample/blob/master/LICENSE.md)

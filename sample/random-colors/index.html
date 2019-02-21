@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Random Colors</title>
+	<style>
+	
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	
+	body {
+		display: flex;
+		flex-wrap: wrap
+	}
+
+	div {
+		width: calc(100% / 4);
+		height: calc(100% / 3);
+	}
+
+	</style>
+</head>
+<body>
+
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<script>
+
+const colors = ['#E6E6FA','#D8BFD8','#DDA0DD','#EE82EE','#DA70D6','#FF00FF','#FF00FF','#BA55D3','#9370DB','#663399','#8A2BE2','#9400D3','#9932CC','#8B008B','#800080','#4B0082','#6A5ACD','#483D8B','#7B68EE']
+
+const divs = document.querySelectorAll('div')
+
+function random() {
+	for(let d of divs) {
+		let color = colors[Math.floor(Math.random() * colors.length)]
+		d.style.background = color
+	}
+}
+
+document.addEventListener('click', _ => {
+	let color = colors[Math.floor(Math.random() * colors.length)]
+	random()
+})
+random()
+
+	</script>
+
+</body>
+</html>
