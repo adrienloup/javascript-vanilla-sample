@@ -2,49 +2,40 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Video Playe</title>
-    <style></style>
+		<title>Video Player</title>
+    <link href="index.css" rel="stylesheet">
   </head>
-    
-  <body> 
+  <body>
 
-  <div style="text-align:center"> 
-    <button onclick="playPause()">Play/Pause</button> 
-    <button onclick="makeSmall()">Small</button>
-    <button onclick="makeBig()">Big</button>
-    <button onclick="makeNormal()">Normal</button>
-    <br><br>
-    <video id="video" width="600">
-      <source src="https://www.videvo.net/videvo_files/converted/2016_09/videos/160820_399_NYC_OutOfFocusCarLightsLOOP_1080p.mp413592.webm" type="video/webm">
-      <source src="https://www.videvo.net/videvo_files/converted/2016_09/videos/160820_399_NYC_OutOfFocusCarLightsLOOP_1080p.mp413592.mp4" type="video/mp4">
+  <div data-player1>
+    <video data-video>
+      <source src="https://giant.gfycat.com/CrispSpanishKoalabear.mp4" type="video/mp4">
+      <source src="https://giant.gfycat.com/CrispSpanishKoalabear.webm" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-  </div> 
+    <div data-controls>
+      <button data-play>Play/Pause</button> 
+      <button data-small>Small</button>
+      <button data-normal>Normal</button>
+      <button data-big>Big</button>
+    </div>
+  </div>
 
-  <script> 
+  <div data-player2>
+    <video data-video>
+      <source src="https://giant.gfycat.com/CrispSpanishKoalabear.mp4" type="video/mp4">
+      <source src="https://giant.gfycat.com/CrispSpanishKoalabear.webm" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div data-controls>
+      <button data-play>Play/Pause</button> 
+      <button data-small>Small</button>
+      <button data-normal>Normal</button>
+      <button data-big>Big</button>
+    </div>
+  </div>
 
-var myVideo = document.getElementById(video)
+	<script src="index.js"></script>
 
-function playPause() { 
-  if (myVideo.paused) 
-    myVideo.play()
-  else 
-    myVideo.pause()
-} 
-
-function makeBig() { 
-  myVideo.width = 560
-} 
-
-function makeSmall() { 
-  myVideo.width = 320
-} 
-
-function makeNormal() { 
-  myVideo.width = 420
-} 
-
-  </script> 
-
-  </body> 
+</body>
 </html>
