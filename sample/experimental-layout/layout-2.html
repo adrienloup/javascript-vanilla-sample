@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Layout 2</title>
+		<style>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	height: 400vh;
+}
+
+.panel {
+	height: 100vh;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+#panel-1 {
+	background-color: red;
+}
+
+#panel-2 {
+	background-color: blue;
+}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div id="panel-1" class="panel">
+		</div>
+
+		<div id="panel-2" class="panel">
+		</div>
+
+		<script>
+
+const panels = document.querySelectorAll('.panel')
+console.log(panels)
+
+document.addEventListener('scroll', onScroll, false)
+
+function onScroll() {
+
+	let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+	console.log(scrollTop)
+	let scrolled
+	let current
+
+
+	for(let panel of panels) {
+		let currentTop = panel.offsetTop
+		if(scrollTop > currentTop) {
+			scrolled = panel
+			// console.log(scrolled)
+		}
+	}
+
+	if(scrolled != current && typeof(scrolled) !== 'undefined') {
+		current = scrolled
+		// firstChild.style.transform = 'translateX(' + (posX - firstChild.clientWidth) + 'px) translateZ(0)'
+		// lastChild.style.transform = 'translateX(' + -(posX - lastChild.clientWidth) + 'px) translateZ(0)'
+	}
+	
+}
+
+onScroll()
+
+		</script>
+
+	</body>
+
+</html>
