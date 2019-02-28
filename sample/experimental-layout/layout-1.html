@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Layout 1</title>
+		<style>
+
+* { margin: 0; padding: 0 }
+body{ height: 700vh }
+
+[data-panel] {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+[data-left], [data-right] {
+	max-width: 300px;
+	width: 50%;
+	height: 50%;
+	position: relative;
+	overflow: hidden;
+}
+
+[data-left]::after, [data-right]::after {
+	content: "";
+	width: 200%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-image: url('https://picsum.photos/1000/1000/?image=565');
+	background-size: cover;
+}
+
+[data-left] { left: -50% }
+[data-left]::after { left: 0 }
+
+[data-right] { right: -50% }
+[data-right]::after { left: -100% }
+
+		</style>
+	</head>
+
+	<body>
+
+		<div data-panel data-ratio="5">
+			<div data-left></div>
+			<div data-right></div>
+		</div>
+		
+		<div data-panel data-ratio="4">
+			<div data-left></div>
+			<div data-right></div>
+		</div>
+
+		<div data-panel data-ratio="3">
+			<div data-left></div>
+			<div data-right></div>
+		</div>
+		
+		<div data-panel data-ratio="2">
+			<div data-left></div>
+			<div data-right></div>
+		</div>
+
+		<div data-panel data-ratio="1">
+			<div data-left></div>
+			<div data-right></div>
+		</div>
+		
+		<script>
+
+document.addEventListener('scroll', onScroll, false)
+window.addEventListener('resize', onResize, false)
+
+const panels = document.querySelectorAll('[data-panel]')
+const elements = []
+
+panels.forEach((el, i) => {
+	let leftPanel = el.querySelector('[data-left]')
+	let rightPanel = el.querySelector('[data-right]')
+	elements.push({
+		left: leftPanel,
+		right: rightPanel,
+		elm: el,
+		ratio: el.getAttribute('data-ratio')
+	})
+})
+
+function clamp(min, max, value) {
+	return Math.min(Math.max(value, min), max)
+}
+
+function onScroll() {
+
+	let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+	elements.forEach((el, i) => {
+
+		let ratio = el.ratio
+		,elm = el.elm
+		,left = el.left
+		,right = el.right
+
+		let elmRatio = clamp(0, 1, (scrollTop - (elm.clientHeight * ratio)) / elm.clientHeight)
+		,childRatio = clamp(0, 1, (scrollTop - (elm.clientHeight * (ratio - 1))) / elm.clientHeight)
+
+		let panelScale = 1-elmRatio
+		,panelPosY = elmRatio * elm.clientHeight
+		,panelPosX = childRatio * (elm.clientWidth / 2)
+
+		elm.style.transform = 'translate3d(0px, ' + -panelPosY + 'px, 0px) scale(' + panelScale + ')'
+		left.style.transform = 'translate3d(' + panelPosX + 'px, 0px, 0px)'
+		right.style.transform = 'translate3d(' + -panelPosX + 'px, 0px, 0px)'
+
+	})
+
+}
+
+function onResize() {
+	onScroll()
+}
+
+		</script>
+
+	</body>
+
+</html>
