@@ -1,0 +1,79 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.4 -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  color: #000;
+  background: #eee;
+}
+button {
+  padding: 10px 15px;
+  font: 20px/1 -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  color: #eee;
+  background: #000;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%,-50%);
+}
+#items {
+  width: calc(100% - 20px);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.item {
+  width: calc((100% - 120px) / 6);
+  padding: 10px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  will-change: width;
+  cursor: pointer;
+}
+.item > div {
+  background: #fff;
+}
+.item div div {
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+.item img {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+.item.zoom {
+  width: calc((100% - 40px) / 2);
+}
+@media only screen and (max-width: 1280px) {
+  .item {
+    width: calc((100% - 80px) / 4);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .item {
+    width: calc((100% - 60px) / 3);
+  }
+  .item.zoom {
+    width: calc((100% - 20px));
+  }
+}
+@media only screen and (max-width: 769px) {
+  .item {
+    width: calc(50% - 20px);
+  }
+}
