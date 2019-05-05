@@ -47,16 +47,16 @@ body {
     <script>
           
       const items = document.querySelector('#items')
-      let picsum = 30
+      let id = 0
       
       const loadMore = function() {
         for (let i = 0; i < 10; i++) {
           let item = document.createElement('div')
           let img = document.createElement('img')
           let text = document.createElement('p')
-          img.src = `http://picsum.photos/id/${picsum++}/467/267`
+          img.src = `http://picsum.photos/id/${id++ + 30}/467/267`
           item.appendChild(img)
-          text.innerText = `${picsum++} - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis nisi dicta similique repellat sit suscipit adipisci nostrum numquam, explicabo ut quis eos porro reiciendis quo sapiente saepe. Repellendus, hic voluptatum.`
+          text.innerText = `${id++} - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis nisi dicta similique repellat sit suscipit adipisci nostrum numquam, explicabo ut quis eos porro reiciendis quo sapiente saepe. Repellendus, hic voluptatum.`
           item.appendChild(text)
           item.setAttribute('class', 'item')
           items.appendChild(item)
