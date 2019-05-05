@@ -13,6 +13,7 @@
 * [Layout 1](https://adrienloup.github.io/javascript-vanilla-sample/sample/experimental-layout/layout-1.html)
 * [Layout 2](https://adrienloup.github.io/javascript-vanilla-sample/sample/experimental-layout/layout-2.html)
 * [Layout 3](https://adrienloup.github.io/javascript-vanilla-sample/sample/experimental-layout/layout-3.html)
+* [Layout 4](https://adrienloup.github.io/javascript-vanilla-sample/sample/experimental-layout/layout-4.html)
 
 ### License
 [ISC](https://github.com/adrienloup/javascript-vanilla-sample/blob/master/LICENSE.md)
