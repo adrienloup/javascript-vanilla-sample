@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <style>
+      *, html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+
+      div {
+        width: 20vw;
+        height: 20vw;
+        margin: auto;
+        border-radius: 2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      const colors = ['red', 'green', 'blue']
+      const div = document.querySelector('div')
+
+      document.body.addEventListener('click', random, false)
+
+      function random() {
+        let color = Math.floor(Math.random() * colors.length)
+        div.style.background = colors[color]
+      }
+
+      random()
+    </script>
+  </body>
+</html>
