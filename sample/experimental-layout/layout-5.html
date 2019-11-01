@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Layout 4</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      
+      *, html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        position: relative;
+        overflow: hidden;
+        background: #eee;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 0;
+      }
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 1;
+        position: relative;
+        font-size: 20px;
+        padding: 40px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <ul id="menu1">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+      <li>item6</li>
+      <li>item7</li>
+      <li>item8</li>
+      <li>item9</li>
+      <li>item10</li>
+      <li>item11</li>
+      <li>item12</li>
+      <li>item13</li>
+      <li>item14</li>
+      <li>item15</li>
+      <li>item16</li>
+      <li>item17</li>
+      <li>item18</li>
+      <li>item19</li>
+      <li>item20</li>
+      <li>item21</li>
+      <li>item22</li>
+      <li>item23</li>
+      <li>item24</li>
+      <li>item25</li>
+    </ul>
+
+    <ul id="menu2">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li>item6</li>
+        <li>item7</li>
+        <li>item8</li>
+        <li>item9</li>
+        <li>item10</li>
+        <li>item11</li>
+        <li>item12</li>
+        <li>item13</li>
+        <li>item14</li>
+        <li>item15</li>
+        <li>item16</li>
+        <li>item17</li>
+        <li>item18</li>
+        <li>item19</li>
+        <li>item20</li>
+        <li>item21</li>
+        <li>item22</li>
+        <li>item23</li>
+        <li>item24</li>
+        <li>item25</li>
+    </ul>
+
+    <script async defer>
+
+      class Menu {
+  
+        constructor(element) {
+          this.onResize = this.onResize.bind(this);
+          this.onMousemove = this.onMousemove.bind(this);
+          this.element = document.querySelector(element);
+          this.elementWidth = null;
+          this.elementScrollWidth = null;
+          this.ratio = null;
+          this.mouseX = 0;
+          this.mousePositionX = 0;
+          this.positionX = 0;
+          this.easing = 20;
+        }
+        events() {
+          window.addEventListener('resize', this.onResize, false);
+          this.element.addEventListener('mousemove', this.onMousemove, false);
+        }
+        init() {
+          this.events();
+          this.start();
+          this.onResize();
+        }
+        start() {
+          const _this = this;
+          setInterval(function() {
+            _this.positionX += (_this.mousePositionX - _this.positionX) / _this.easing;   
+            _this.element.scrollLeft = _this.positionX * _this.ratio;
+          }, 10);
+        }
+        onMousemove(e) {
+          this.mouseX = e.pageX - this.element.parentElement.offsetLeft - this.element.offsetLeft;
+          this.mousePositionX = Math.min(Math.max(0, this.mouseX), this.elementWidth);
+        }
+        onResize() {		
+          this.elementWidth = this.element.offsetWidth;
+          this.elementScrollWidth = this.element.scrollWidth;
+          this.ratio = (this.elementScrollWidth / this.elementWidth) - 1;
+          console.log(this.ratio);
+        }
+      }
+
+      const menu1 = new Menu('#menu1');
+      const menu2 = new Menu('#menu2');
+
+      menu1.init();
+      menu2.init();
+
+    </script>
+  </body>
+</html>
