@@ -4,131 +4,131 @@
 		<meta charset="UTF-8">
 		<title>Layout 1</title>
 		<style>
+      
+      *, html, body {
+        margin: 0;
+        padding: 0;
+      }
 
-* { margin: 0; padding: 0 }
-body{ height: 700vh }
+      body { height: 500vh }
 
-[data-panel] {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+      [data-item] {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-[data-left], [data-right] {
-	max-width: 300px;
-	width: 50%;
-	height: 50%;
-	position: relative;
-	overflow: hidden;
-}
+      [data-panel] {
+        max-width: 300px;
+        width: 50%;
+        height: 50%;
+        position: relative;
+        overflow: hidden;
+      }
 
-[data-left]::after, [data-right]::after {
-	content: "";
-	width: 200%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	background-image: url('https://picsum.photos/1000/1000/?image=565');
-	background-size: cover;
-}
+      [data-panel]::after {
+        content: "";
+        width: 200%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-image: url('https://picsum.photos/1000/1000');
+        background-size: cover;
+      }
+      
+      [data-left] {left: -50% }
+      [data-left]::after { left: 0 }
 
-[data-left] { left: -50% }
-[data-left]::after { left: 0 }
+      [data-right] { right: -50% }
+      [data-right]::after { left: -100% }
 
-[data-right] { right: -50% }
-[data-right]::after { left: -100% }
+    </style>
+  </head>
+  <body>
 
-		</style>
-	</head>
+    <div data-item data-ratio="0">
+      <div data-panel data-left></div>
+      <div data-panel data-right></div>
+    </div>
+    <div data-item data-ratio="1">
+      <div data-panel data-left></div>
+      <div data-panel data-right></div>
+    </div>
+    <div data-item data-ratio="2">
+      <div data-panel data-left></div>
+      <div data-panel data-right></div>
+    </div>
+    <div data-item data-ratio="3">
+      <div data-panel data-left></div>
+      <div data-panel data-right></div>
+    </div>
+    <div data-item data-ratio="4">
+      <div data-panel data-left></div>
+      <div data-panel data-right></div>
+    </div>
 
-	<body>
+    <script>
 
-		<div data-panel data-ratio="5">
-			<div data-left></div>
-			<div data-right></div>
-		</div>
-		
-		<div data-panel data-ratio="4">
-			<div data-left></div>
-			<div data-right></div>
-		</div>
+      (function(window, undefined) {
 
-		<div data-panel data-ratio="3">
-			<div data-left></div>
-			<div data-right></div>
-		</div>
-		
-		<div data-panel data-ratio="2">
-			<div data-left></div>
-			<div data-right></div>
-		</div>
+        const items = document.querySelectorAll('[data-item]')
+        const elements = []
 
-		<div data-panel data-ratio="1">
-			<div data-left></div>
-			<div data-right></div>
-		</div>
-		
-		<script>
+        document.addEventListener('scroll', onScroll, false)
+        window.addEventListener('resize', onResize, false)
 
-document.addEventListener('scroll', onScroll, false)
-window.addEventListener('resize', onResize, false)
+        items.forEach((el) => {
+          let left = el.querySelector('[data-left]')
+          let right = el.querySelector('[data-right]')
 
-const panels = document.querySelectorAll('[data-panel]')
-const elements = []
+          elements.push({
+            left: left,
+            right: right,
+            el: el,
+            ratio: el.getAttribute('data-ratio')
+          })
+        })
 
-panels.forEach((el, i) => {
-	let leftPanel = el.querySelector('[data-left]')
-	let rightPanel = el.querySelector('[data-right]')
-	elements.push({
-		left: leftPanel,
-		right: rightPanel,
-		elm: el,
-		ratio: el.getAttribute('data-ratio')
-	})
-})
+        function clamp(min, max, value) {
+          return Math.min(Math.max(value, min), max)
+        }
 
-function clamp(min, max, value) {
-	return Math.min(Math.max(value, min), max)
-}
+        function onScroll() {
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
-function onScroll() {
+          elements.forEach((el) => {
+            let item = el.el
+            let left = el.left
+            let right = el.right
+            let ratio = el.ratio
 
-	let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+            let itemRatio = clamp(0, 1, (scrollTop - (item.clientHeight * ratio)) / item.clientHeight)
+            let panelRatio = clamp(0, 1, (scrollTop - (item.clientHeight * (ratio - 1))) / item.clientHeight)
 
-	elements.forEach((el, i) => {
+            let positionY = itemRatio * item.clientHeight
+            let positionX = panelRatio * (item.clientWidth / 2)
+            let scale = 1 - itemRatio
 
-		let ratio = el.ratio
-		,elm = el.elm
-		,left = el.left
-		,right = el.right
+            item.style.transform = 'translate3d(0px, ' + -positionY + 'px, 0px) scale(' + scale + ')'
+            left.style.transform = 'translate3d(' + positionX + 'px, 0px, 0px)'
+            right.style.transform = 'translate3d(' + -positionX + 'px, 0px, 0px)'
+          })
+        }
 
-		let elmRatio = clamp(0, 1, (scrollTop - (elm.clientHeight * ratio)) / elm.clientHeight)
-		,childRatio = clamp(0, 1, (scrollTop - (elm.clientHeight * (ratio - 1))) / elm.clientHeight)
+        function onResize() {
+          onScroll()
+        }
 
-		let panelScale = 1-elmRatio
-		,panelPosY = elmRatio * elm.clientHeight
-		,panelPosX = childRatio * (elm.clientWidth / 2)
+        onScroll()
 
-		elm.style.transform = 'translate3d(0px, ' + -panelPosY + 'px, 0px) scale(' + panelScale + ')'
-		left.style.transform = 'translate3d(' + panelPosX + 'px, 0px, 0px)'
-		right.style.transform = 'translate3d(' + -panelPosX + 'px, 0px, 0px)'
+      })(window)
 
-	})
-
-}
-
-function onResize() {
-	onScroll()
-}
-
-		</script>
-
-	</body>
-
+    </script>
+  </body>
 </html>
