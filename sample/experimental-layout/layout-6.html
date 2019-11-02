@@ -16,23 +16,24 @@
         height: 20vw;
         margin: auto;
         border-radius: 2vw;
+        background: red;
       }
     </style>
   </head>
   <body>
     <div></div>
     <script>
+    (function(window, undefined) {
+
       const colors = ['red', 'green', 'blue']
       const div = document.querySelector('div')
 
-      document.body.addEventListener('click', random, false)
+      document.body.addEventListener('click', () => {
+        let color = colors[Math.floor(Math.random() * colors.length)]
+        div.style.background = color
+      }, false)
 
-      function random() {
-        let color = Math.floor(Math.random() * colors.length)
-        div.style.background = colors[color]
-      }
-
-      random()
+    })(window)
     </script>
   </body>
 </html>
