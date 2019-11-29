@@ -18,6 +18,3 @@
 * [Layout 5](https://adrienloup.github.io/javascript-vanilla-sample/sample/experimental-layout/layout-5.html)
 * [Layout 6](https://adrienloup.github.io/javascript-vanilla-sample/sample/experimental-layout/layout-6.html)
 * And others
-
-### License
-[ISC](https://github.com/adrienloup/javascript-vanilla-sample/blob/master/LICENSE.md)
